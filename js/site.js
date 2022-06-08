@@ -1,4 +1,3 @@
-casosComplejo();
 
 function ventanaCondicional(){
     let nombre = prompt("¿Como te llamas?");    
@@ -13,7 +12,30 @@ function ventanaCondicional(){
 
 
 function nido(){
-    let edad = parseInt( prompt("¿Cuantos años tienes?"));
+    let edad = parseInt(prompt("¿Cuantos años tienes?"));
+    if(edad >= 18)
+    {
+        let registro = prompt("¿Tienes registro?");
+        if(registro == "Si")
+        {
+            let vigente = prompt("¿Tienes registro vigente?");
+            if(vigente == "Si")
+            {
+                alert("Puedo manejar auto");
+            }
+            else
+            {                
+                alert("Debe renovar el registro");    
+            }
+        }
+        else{
+            alert("Debe sacar el registro");
+        }
+        
+    }     
+    else{
+        alert("No cumple");
+    }
 }
 
 
@@ -67,7 +89,6 @@ function casosCami(){
 
 }
 
-
 function casos(){
     let pro = prompt("¿Cuantos años tienes?");
     let edad = parseInt(pro);
@@ -85,3 +106,28 @@ function casos(){
             break;
     }
 }
+function ternario(){
+    let numero1 = 10;
+    let numero2 = 20;
+    let variable = (numero1 > numero2) ?  numero2 : numero1;
+
+    let a = 10;
+    let resultado = (a >= 18) ? 'Puede manejar auto'                    
+                    : (a >= 16) ? 'Puede ver la serie'
+                    : (a >= 10)? 'Puede ver las tortugas' 
+                    : 'No cumple';
+
+    alert(variable);
+    alert(resultado);
+}
+
+function cicloWhile(){
+    let x = 0;
+     while (x < 100) {
+        let y = (x % 2 == 0) ?document.writeln(x) : false;
+        alert(x);
+        x++;              
+     }         
+}
+
+cicloWhile();
